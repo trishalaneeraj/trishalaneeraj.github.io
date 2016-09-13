@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "Hello!",
   "tagline": "Diary of a new New Yorker.",
   "body": "### Who am I?\r\nMy name is Trishala Neeraj. I am currently pursuing a Masters degree in Information Science at Cornell Tech. I graduated from BITS Pilani a couple of months ago, took a nice vacation with my family, and came to New York City for some more fun! I am going to write about my new experiences here and I promise to try to keep it updated.\r\n\r\n### What have I been up to?\r\nThe past few weeks have kept me occupied with some very interesting courses that I am taking this semester, interacting with many extremely knowledgeable people and exploring New York! I like working on projects in Data Science. Over the last three years, I developed a huge interest in Machine Learning and Natural Language Processing. You can check out the details of some of my undergraduate projects [here](https://www.linkedin.com/in/trishala-neeraj-169a38126).\r\n\r\n### What are some other activities I enjoy?\r\nI love hiking. My best hiking experience was at Old Rag Mountain, Virginia. I like traveling in general; learning about different cultures and trying out different cuisines. \r\n\r\n\r\n### How can you contact me?\r\nEmail: tn338@cornell.edu \r\n\r\n(NetID: tn338)\r\n",
+=======
+  "name": "Diary of a new New Yorker",
+  "tagline": "Hello!",
+  "body": "### Who am I?\r\nMy name is Trishala Neeraj. I am a graduate student at Cornell Tech. NetID: tn338.\r\n\r\n### How to contact me?\r\nEmail: tn338@cornell.edu",
+>>>>>>> 15fc0c04948bab7d0d39caad00a24d97c6d17d5b
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }

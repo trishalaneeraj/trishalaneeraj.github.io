@@ -1,28 +1,31 @@
-# Site settings
-title:
-email: tn338 @ cornell.edu
-url: https://trishalaneeraj.github.io
-description: "'Because the people who are crazy enough to think they can change the world, are the ones who do.' - Apple Think Different"
+# Permalinks
+permalink:      /:year-:month-:day/:title
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary-dark: '#000000'
-  links: '#219ab3'
+# Setup
+title:          Tale
+paginate:       5
+baseurl:        "/tale"
+url:            "https://chesterhow.github.io"
 
-# Footer settings
-footer: Trishala Neeraj
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: linkedin
-    url: https://linkedin.com/in/trishala-neeraj
-  - title: github
-    url: https://github.com/trishalaneeraj
-  - title: instagram
-    url: https://www.instagram.com/trishalaneeraj/
-
-
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
 
 # Build settings
-markdown: kramdown
-permalink: pretty
+markdown:       kramdown
+
+# About
+author:
+  name:         Chester How
+  url:          http://chester.how
+  email:        chesterhow@gmail.com
+
+# Custom vars
+version:        3.4.1
+github:
+  repo:         https://github.com/chesterhow/tale
+
+# Gems
+plugins:
+  - jekyll-paginate

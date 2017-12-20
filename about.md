@@ -5,7 +5,7 @@ author: "Trishala Neeraj"
 permalink: /about/
 ---
 
-![](https://drive.google.com/uc?export=&id=1ibDAG5Yg5NWX6PeSdPbH1rOajHEaRUUC "Photo")
+![](https://drive.google.com/uc?export=&id=1ibDAG5Yg5NWX6PeSdPbH1rOajHEaRUUC "Photo" =150x150)
 
 Hello! My name is Trishala and I am currently a graduate student at Cornell University at Cornell Tech. My academic interests include natural language processing and machine learning. 
 

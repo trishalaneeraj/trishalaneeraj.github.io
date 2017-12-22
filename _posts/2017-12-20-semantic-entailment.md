@@ -112,9 +112,9 @@ From traditional modules like the one discussed above, to newer deep learning ar
 To study the current state-of-the-art approaches for this task, I looked at the results of the results of the [Shared Task at RepEval 2017](https://repeval2017.github.io/shared/). The Shared Task evaluated neural network sentence representation learning models on the MultiNLI corpus I described above. There were 5 participating teams and they all beat the baselines of BiLSTM and CBOW reported in Williams et al. 
 
 
-INSERT DETAILS ABOUT THE COMPETITION
+<!-- INSERT DETAILS ABOUT THE COMPETITION
 The best single model used stacked BiLSTMs with residual connections to extract sentence features and reached 74.5% accuracy on the genre-matched test set. Surprisingly, the results of the competition were fairly consistent across the genrematched and genre-mismatched test sets, and across subsets of the test data representing a variety of linguistic phenomena, suggesting that all of the submitted systems learned reasonably domainindependent representations for sentence meaning.
-
+ -->
 
 The Deep learning architecture often is a variant of the following architecture as shown in the figure below.
 
@@ -122,19 +122,16 @@ The Deep learning architecture often is a variant of the following architecture 
 
 A wide variety of neural networks for encoding sentences into fixed-size representations exists, and it is not yet clear which one best captures generically useful information. Often the sentence encoders vary and they are convolutional neural networks, recurrent neural networks, or a combination of attention along with one of the network architectures.
 
+The [paper by Nie and Bansal](https://arxiv.org/pdf/1708.02312.pdf) is one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results. 
+
 ![](https://drive.google.com/uc?export=&id=1KpPTdhWDE3M2ZHYXAaRKJMNk_hCzi2aT "Nie and Bansal")
 
+Their architecture relies on word vectors and Bi-LSTMs and RNNs connected in a ResNet-like architecture. The concatenation of all the vectors in the last layer passes through a row max pooling which creates a final vector representation, which finally passes through a 3-way softmax for the 3 categories of entailment, contradiction, or neural.
 
-The paper by Nie and Bansal is one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results. 
-
-Their architecture relies on word vectors and Bi-LSTMS connected in a ResNet \cite{resnet} like architecture. The concatenation of all the vectors in the last layer passes through a row max pooling which creates a final vector representation, which finally passes through a 3-way softmax for the 3 categories.
-
+[RNN-based sentence encoder with gated attention](https://arxiv.org/abs/1708.01353) is another top result from the same competition.
 
 # Future Directions
 
-Models learned on NLI can perform better than models trained in unsupervised conditions or on other supervised tasks. \cite{chen2017recurrent} is another approach to do semantic entailment.
+Models learned on NLI can perform better than models trained in unsupervised conditions or on other supervised tasks. 
 
-This also shows, that learning generic sentence embedding has barely been explored and understanding the NLI task can bring sentence embedding quality to the next level.
-
-Also, supervised training for word embedding can be explored. 
-StarSpace \cite{starspace}, shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done.
+Learning generic sentence embedding has barely been explored and understanding the NLI task can bring sentence embedding quality to the next level. Also, supervised training for word embedding can be explored. [StarSpace](https://arxiv.org/abs/1709.03856), shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done.

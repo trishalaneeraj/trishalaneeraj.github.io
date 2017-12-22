@@ -247,8 +247,9 @@ If a commitment pair is judged to be a positive instance of TE, it is sent to an
 
 <p>To study the current state-of-the-art approaches for this task, I looked at the results of the results of the <a href="https://repeval2017.github.io/shared/">Shared Task at RepEval 2017</a>. The Shared Task evaluated neural network sentence representation learning models on the MultiNLI corpus I described above. There were 5 participating teams and they all beat the baselines of BiLSTM and CBOW reported in Williams et al.</p>
 
-<p>INSERT DETAILS ABOUT THE COMPETITION
-The best single model used stacked BiLSTMs with residual connections to extract sentence features and reached 74.5% accuracy on the genre-matched test set. Surprisingly, the results of the competition were fairly consistent across the genrematched and genre-mismatched test sets, and across subsets of the test data representing a variety of linguistic phenomena, suggesting that all of the submitted systems learned reasonably domainindependent representations for sentence meaning.</p>
+<!-- INSERT DETAILS ABOUT THE COMPETITION
+The best single model used stacked BiLSTMs with residual connections to extract sentence features and reached 74.5% accuracy on the genre-matched test set. Surprisingly, the results of the competition were fairly consistent across the genrematched and genre-mismatched test sets, and across subsets of the test data representing a variety of linguistic phenomena, suggesting that all of the submitted systems learned reasonably domainindependent representations for sentence meaning.
+ -->
 
 <p>The Deep learning architecture often is a variant of the following architecture as shown in the figure below.</p>
 
@@ -256,20 +257,19 @@ The best single model used stacked BiLSTMs with residual connections to extract 
 
 <p>A wide variety of neural networks for encoding sentences into fixed-size representations exists, and it is not yet clear which one best captures generically useful information. Often the sentence encoders vary and they are convolutional neural networks, recurrent neural networks, or a combination of attention along with one of the network architectures.</p>
 
+<p>The <a href="https://arxiv.org/pdf/1708.02312.pdf">paper by Nie and Bansal</a> is one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results.</p>
+
 <p><img src="https://drive.google.com/uc?export=&amp;id=1KpPTdhWDE3M2ZHYXAaRKJMNk_hCzi2aT" alt="" title="Nie and Bansal" /></p>
 
-<p>The paper by Nie and Bansal is one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results.</p>
+<p>Their architecture relies on word vectors and Bi-LSTMs and RNNs connected in a ResNet-like architecture. The concatenation of all the vectors in the last layer passes through a row max pooling which creates a final vector representation, which finally passes through a 3-way softmax for the 3 categories of entailment, contradiction, or neural.</p>
 
-<p>Their architecture relies on word vectors and Bi-LSTMS connected in a ResNet \cite{resnet} like architecture. The concatenation of all the vectors in the last layer passes through a row max pooling which creates a final vector representation, which finally passes through a 3-way softmax for the 3 categories.</p>
+<p><a href="https://arxiv.org/abs/1708.01353">RNN-based sentence encoder with gated attention</a> is another top result from the same competition.</p>
 
 <h1 id="future-directions">Future Directions</h1>
 
-<p>Models learned on NLI can perform better than models trained in unsupervised conditions or on other supervised tasks. \cite{chen2017recurrent} is another approach to do semantic entailment.</p>
+<p>Models learned on NLI can perform better than models trained in unsupervised conditions or on other supervised tasks.</p>
 
-<p>This also shows, that learning generic sentence embedding has barely been explored and understanding the NLI task can bring sentence embedding quality to the next level.</p>
-
-<p>Also, supervised training for word embedding can be explored. 
-StarSpace \cite{starspace}, shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done.</p>
+<p>Learning generic sentence embedding has barely been explored and understanding the NLI task can bring sentence embedding quality to the next level. Also, supervised training for word embedding can be explored. <a href="https://arxiv.org/abs/1709.03856">StarSpace</a>, shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done.</p>
 
 
 </div>
@@ -285,7 +285,7 @@ StarSpace \cite{starspace}, shows embedding sentences, words for various tasks l
 
     <footer>
       <span>
-        &copy; <time datetime="2017-12-21 00:24:37 -0500">2017</time> Chester How. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2017-12-21 23:38:44 -0500">2017</time> Chester How. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

@@ -103,7 +103,7 @@ The [Hickl-Bensley System Architecture](http://delivery.acm.org/10.1145/1660000/
 
 ![](https://drive.google.com/uc?export=&id=1wdIoSJ4mbgw33_vIQLDrd75BQyMMvaTq "Generic")
 
-The sentence pairs are fed into a Preprocessing module and the annotated passages are then sent to a Commitment
+The sentence pairs are fed into a preprocessing module and the annotated passages are then sent to a Commitment
 Extraction module. Each pair of commitments are then considered in turn by an Entailment Classification module. 
 If a commitment pair is judged to be a positive instance of TE, it is sent to an Entailment Validation module. If no text commitment can be identified which contradicts the hypothesis, it is presumed to be textually entailed (return YES). If the entailed hypothesis is textually contradicted by any of the commitments extracted from the premise, the hypothesis is considered to be contradicted by the premise, NO is returned.
 
@@ -120,18 +120,26 @@ The Deep learning architecture often is a variant of the following architecture 
 
 ![](https://drive.google.com/uc?export=&id=1yNyFuZDZkVD8ki4-vosikPyowyXOAEon "Generic")
 
-A wide variety of neural networks for encoding sentences into fixed-size representations exists, and it is not yet clear which one best captures generically useful information. Often the sentence encoders vary and they are convolutional neural networks, recurrent neural networks, or a combination of attention along with one of the network architectures.
+Models for semantic entailment task generally fall into two categories: 1) Sentence encoding of the individual sentences 2) Joint methods that allow to use encoding of both sentences, like cross-features of attention. Approach 1, is useful for training generic sentence encoders and can be used for a variety of other tasks, like the [InferSent](https://arxiv.org/pdf/1705.02364.pdf) paper.
+The figure above shows a generic architecture, for SNLI tasks. The sentence encoders are often a deep learning architecture, like a CNN or an RNN that outputs a fixed size representation vector v, for the hypothesis and the premise separately. Once
+the sentence vectors are generated, 3 matching
+methods are applied to extract relations between the two fixed size representation vectors.
+(i) concatenation of the two representations
+(ii) element-wise product of the two vectors; and
+(iii) absolute element-wise difference of the two vectors. The
+resulting vector, which captures information from
+both the premise and the hypothesis, is fed into
+a 3-class classifier consisting of multiple fullyconnected
+layers culminating in a softmax layer. 
 
-The [paper by Nie and Bansal](https://arxiv.org/pdf/1708.02312.pdf) is one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results. 
+The generic approach is best highlighted in a[paper by Nie and Bansal](https://arxiv.org/pdf/1708.02312.pdf) which is also one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results. 
 
 ![](https://drive.google.com/uc?export=&id=1KpPTdhWDE3M2ZHYXAaRKJMNk_hCzi2aT "Nie and Bansal")
 
-Their architecture relies on word vectors and Bi-LSTMs and RNNs connected in a ResNet-like architecture. The concatenation of all the vectors in the last layer passes through a row max pooling which creates a final vector representation, which finally passes through a 3-way softmax for the 3 categories of entailment, contradiction, or neural.
+Their architecture relies on word vectors and Bi-LSTMs connected in a ResNet-like architecture. Each of the subsequent layer concatenates the vector representation of the previous layers. Using the vector representation from every previous layer, means the architecture, becomes more computationally expensive, but such architectures have performed well for image classification tasks in the past. The concatenation of all the vectors in the last layer passes through a row max pooling which creates a final vector representation,that passes through a 3-way softmax for the 3 categories of entailment, contradiction, or neural.
 
 [RNN-based sentence encoder with gated attention](https://arxiv.org/abs/1708.01353) is another top result from the same competition.
 
 # Future Directions
 
-Models learned on NLI can perform better than models trained in unsupervised conditions or on other supervised tasks. 
-
-Learning generic sentence embedding has barely been explored and understanding the NLI task can bring sentence embedding quality to the next level. Also, supervised training for word embedding can be explored. [StarSpace](https://arxiv.org/abs/1709.03856), shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done.
+Learning generic sentence embeddings have barely been explored and understanding the NLI task can improve sentence encoding. The MultiNLI and the SNLI datasets are large scale labeled datasets for Natural Language Processing. Unlike images, NLP does not have large scale labeled datasets that can be used for equivalent transfer learning tasks. The infersent paper, showed how transfer learning is a viable approach for learning different tasks and how such models perform competitively for tasks like Sentiment Analysis  and text classification. Another paper, [StarSpace](https://arxiv.org/abs/1709.03856), shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done. More work need to done, to better understand sentence encoding architectures and I believe semantic entailment datasets will play a key role in that line of research.

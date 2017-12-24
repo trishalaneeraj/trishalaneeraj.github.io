@@ -16,6 +16,7 @@ More specifically, it tries to identify the relationship between the meanings of
 
 Consider the following example taken from the RTE 1 suite:
 >T: The country's largest private employer, Wal-Mart Stores Inc., is being sued by a number of its female employees who claim they were kept out of jobs in management because they are women.
+
 >H: Wal-Mart sued for sexual discrimination.
 
 Classifying into one of entailment, contradiction and neutral requires understanding that keep someone out of a job is here a another way of saying that someone was not hired, and the knowledge that not hiring someone for a job because of the applicant’s gender is an act of sexual discrimination, which is against the law. Succeeding at NLI requires a model to fully capture sentence meaning by handling complex linguistic phenomena like lexical entailment, quantification, coreference, tense, belief, modality, and ambiguity - both lexical and syntactic. NLI is is essential in tasks such as information retrieval, semantic parsing and commonsense reasoning, to name a few.
@@ -64,14 +65,14 @@ This method of creating the dataset - deriving the sentences from image captions
 
 ## SNLI
 
-SNLI was introduced in 2015 after recognizing that machine learning research in this area of semantic enatilment has been very limited by the lack of large-scale resources. SNLI is significantly larger than any other corpus for NLI. It offers 570K pairs of labeled sentences written in a grounded and naturalistic context, based on image captioning. The increase in scale allowed neural network-based models to perform competitively on NLI benchmarks for the first time. NLI is also meant to be used as a tool for evaluating domain-general approaches to semantic representation, in addition to be used for training modern models that require enormous amounts of data.
+[SNLI](https://nlp.stanford.edu/projects/snli/) was introduced in 2015 after recognizing that machine learning research in this area of semantic enatilment has been very limited by the lack of large-scale resources. SNLI is significantly larger than any other corpus for NLI. It offers 570K pairs of labeled sentences written in a grounded and naturalistic context, based on image captioning. The increase in scale allowed neural network-based models to perform competitively on NLI benchmarks for the first time. NLI is also meant to be used as a tool for evaluating domain-general approaches to semantic representation, in addition to be used for training modern models that require enormous amounts of data.
 
 The authors also sought interannotator agreement which was completely absent from the development of other exisiting corpora. However, since the method of putting together this dataset was very similar to SICK, only difference being that in SNLI, extension steps were outsourced to Turkers, bias due to being image-caption based was also present in SNLI.
 
 
 ## MultiNLI
 
-MultiNLI corpus was designed in 2017 for use in the development and evaluation of machine learning models for sentence understanding. It was presented in RepEval - 2017 and is the most newest and by far the largest corpora available for NLI tasks and it improves upon available resources in its coverage. As will be seen in the table below, the examples from the dataset all contain a pair of sentences and the judgement of five turkers and a consensus judgement.
+[MultiNLI](http://www.nyu.edu/projects/bowman/multinli/) corpus was designed in 2017 for use in the development and evaluation of machine learning models for sentence understanding. It was presented in RepEval - 2017 and is the most newest and by far the largest corpora available for NLI tasks and it improves upon available resources in its coverage. As will be seen in the table below, the examples from the dataset all contain a pair of sentences and the judgement of five turkers and a consensus judgement.
 
 The premises in MultiNLI are not rephrased from image captions, unlike SNLI and SICK. Hence, it is not as skewed as them and negative premises are not exceptionally rare. Moreover, it offers data from ten distinct genres of written and spoken English, creating a great setting for evaluation of cross-genre domain adaptation which is often a hard task. The fact that it is multi-genre ensures that any system is being evaluated on nearly the full complexity of the language. 
 
@@ -120,19 +121,20 @@ The Deep learning architecture often is a variant of the following architecture 
 
 ![](https://drive.google.com/uc?export=&id=1yNyFuZDZkVD8ki4-vosikPyowyXOAEon "Generic")
 
-Models for semantic entailment task generally fall into two categories: 1) Sentence encoding of the individual sentences 2) Joint methods that allow to use encoding of both sentences, like cross-features of attention. Approach 1, is useful for training generic sentence encoders and can be used for a variety of other tasks, like the [InferSent](https://arxiv.org/pdf/1705.02364.pdf) paper.
-The figure above shows a generic architecture, for SNLI tasks. The sentence encoders are often a deep learning architecture, like a CNN or an RNN that outputs a fixed size representation vector v, for the hypothesis and the premise separately. Once
-the sentence vectors are generated, 3 matching
-methods are applied to extract relations between the two fixed size representation vectors.
-(i) concatenation of the two representations
-(ii) element-wise product of the two vectors; and
-(iii) absolute element-wise difference of the two vectors. The
-resulting vector, which captures information from
-both the premise and the hypothesis, is fed into
-a 3-class classifier consisting of multiple fullyconnected
-layers culminating in a softmax layer. 
+Models for semantic entailment task generally fall into two categories: 
+1. Sentence encoding of the individual sentences 
+2. Joint methods that allow to use encoding of both sentences, like cross-features of attention. 
 
-The generic approach is best highlighted in a[paper by Nie and Bansal](https://arxiv.org/pdf/1708.02312.pdf) which is also one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results. 
+Approach 1, is useful for training generic sentence encoders and can be used for a variety of other tasks, like the [InferSent](https://arxiv.org/pdf/1705.02364.pdf) paper.
+The figure above shows a generic architecture, for SNLI tasks. The sentence encoders are often a deep learning architecture, like a CNN or an RNN that outputs a fixed size representation vector v, for the hypothesis and the premise separately. Once the sentence vectors are generated, 3 matching
+methods are applied to extract relations between the two fixed size representation vectors:
+* concatenation of the two representations
+* element-wise product of the two vectors
+* absolute element-wise difference of the two vectors. 
+
+The resulting vector, which captures information from both the premise and the hypothesis, is fed into a 3-class classifier consisting of multiple fullyconnected layers culminating in a softmax layer. 
+
+The generic approach is best highlighted in a [paper by Nie and Bansal](https://arxiv.org/pdf/1708.02312.pdf) which is also one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results. 
 
 ![](https://drive.google.com/uc?export=&id=1KpPTdhWDE3M2ZHYXAaRKJMNk_hCzi2aT "Nie and Bansal")
 

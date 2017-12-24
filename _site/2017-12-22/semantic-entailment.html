@@ -7,30 +7,30 @@
 
   <title>
     
-      Semantic Entailment &middot; Tale
+      Semantic Entailment &middot; Trishala
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/tale/styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/tale/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/tale/assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/tale/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 </head>
 
 
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/tale/">
-          <h2 class="nav-title">Tale</h2>
+        <a href="/">
+          <h2 class="nav-title">Trishala</h2>
         </a>
         <ul>
-          <li><a href="/tale/about">About</a></li>
-          <li><a href="/tale/">Posts</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -45,7 +45,7 @@
 
     
       <br>
-      <span>on&nbsp;</span><time datetime="2017-12-20 00:00:00 -0500">December 20, 2017</time>
+      <span>on&nbsp;</span><time datetime="2017-12-22 00:00:00 -0500">December 22, 2017</time>
     
   </div>
 
@@ -66,8 +66,11 @@
 
 <p>Consider the following example taken from the RTE 1 suite:</p>
 <blockquote>
-  <p>T: The country’s largest private employer, Wal-Mart Stores Inc., is being sued by a number of its female employees who claim they were kept out of jobs in management because they are women.
-H: Wal-Mart sued for sexual discrimination.</p>
+  <p>T: The country’s largest private employer, Wal-Mart Stores Inc., is being sued by a number of its female employees who claim they were kept out of jobs in management because they are women.</p>
+</blockquote>
+
+<blockquote>
+  <p>H: Wal-Mart sued for sexual discrimination.</p>
 </blockquote>
 
 <p>Classifying into one of entailment, contradiction and neutral requires understanding that keep someone out of a job is here a another way of saying that someone was not hired, and the knowledge that not hiring someone for a job because of the applicant’s gender is an act of sexual discrimination, which is against the law. Succeeding at NLI requires a model to fully capture sentence meaning by handling complex linguistic phenomena like lexical entailment, quantification, coreference, tense, belief, modality, and ambiguity - both lexical and syntactic. NLI is is essential in tasks such as information retrieval, semantic parsing and commonsense reasoning, to name a few.</p>
@@ -116,13 +119,13 @@ H: Wal-Mart sued for sexual discrimination.</p>
 
 <h2 id="snli">SNLI</h2>
 
-<p>SNLI was introduced in 2015 after recognizing that machine learning research in this area of semantic enatilment has been very limited by the lack of large-scale resources. SNLI is significantly larger than any other corpus for NLI. It offers 570K pairs of labeled sentences written in a grounded and naturalistic context, based on image captioning. The increase in scale allowed neural network-based models to perform competitively on NLI benchmarks for the first time. NLI is also meant to be used as a tool for evaluating domain-general approaches to semantic representation, in addition to be used for training modern models that require enormous amounts of data.</p>
+<p><a href="https://nlp.stanford.edu/projects/snli/">SNLI</a> was introduced in 2015 after recognizing that machine learning research in this area of semantic enatilment has been very limited by the lack of large-scale resources. SNLI is significantly larger than any other corpus for NLI. It offers 570K pairs of labeled sentences written in a grounded and naturalistic context, based on image captioning. The increase in scale allowed neural network-based models to perform competitively on NLI benchmarks for the first time. NLI is also meant to be used as a tool for evaluating domain-general approaches to semantic representation, in addition to be used for training modern models that require enormous amounts of data.</p>
 
 <p>The authors also sought interannotator agreement which was completely absent from the development of other exisiting corpora. However, since the method of putting together this dataset was very similar to SICK, only difference being that in SNLI, extension steps were outsourced to Turkers, bias due to being image-caption based was also present in SNLI.</p>
 
 <h2 id="multinli">MultiNLI</h2>
 
-<p>MultiNLI corpus was designed in 2017 for use in the development and evaluation of machine learning models for sentence understanding. It was presented in RepEval - 2017 and is the most newest and by far the largest corpora available for NLI tasks and it improves upon available resources in its coverage. As will be seen in the table below, the examples from the dataset all contain a pair of sentences and the judgement of five turkers and a consensus judgement.</p>
+<p><a href="http://www.nyu.edu/projects/bowman/multinli/">MultiNLI</a> corpus was designed in 2017 for use in the development and evaluation of machine learning models for sentence understanding. It was presented in RepEval - 2017 and is the most newest and by far the largest corpora available for NLI tasks and it improves upon available resources in its coverage. As will be seen in the table below, the examples from the dataset all contain a pair of sentences and the judgement of five turkers and a consensus judgement.</p>
 
 <p>The premises in MultiNLI are not rephrased from image captions, unlike SNLI and SICK. Hence, it is not as skewed as them and negative premises are not exceptionally rare. Moreover, it offers data from ten distinct genres of written and spoken English, creating a great setting for evaluation of cross-genre domain adaptation which is often a hard task. The fact that it is multi-genre ensures that any system is being evaluated on nearly the full complexity of the language.</p>
 
@@ -255,19 +258,24 @@ The best single model used stacked BiLSTMs with residual connections to extract 
 
 <p><img src="https://drive.google.com/uc?export=&amp;id=1yNyFuZDZkVD8ki4-vosikPyowyXOAEon" alt="" title="Generic" /></p>
 
-<p>Models for semantic entailment task generally fall into two categories: 1) Sentence encoding of the individual sentences 2) Joint methods that allow to use encoding of both sentences, like cross-features of attention. Approach 1, is useful for training generic sentence encoders and can be used for a variety of other tasks, like the <a href="https://arxiv.org/pdf/1705.02364.pdf">InferSent</a> paper.
-The figure above shows a generic architecture, for SNLI tasks. The sentence encoders are often a deep learning architecture, like a CNN or an RNN that outputs a fixed size representation vector v, for the hypothesis and the premise separately. Once
-the sentence vectors are generated, 3 matching
-methods are applied to extract relations between the two fixed size representation vectors.
-(i) concatenation of the two representations
-(ii) element-wise product of the two vectors; and
-(iii) absolute element-wise difference of the two vectors. The
-resulting vector, which captures information from
-both the premise and the hypothesis, is fed into
-a 3-class classifier consisting of multiple fullyconnected
-layers culminating in a softmax layer.</p>
+<p>Models for semantic entailment task generally fall into two categories:</p>
+<ol>
+  <li>Sentence encoding of the individual sentences</li>
+  <li>Joint methods that allow to use encoding of both sentences, like cross-features of attention.</li>
+</ol>
 
-<p>The generic approach is best highlighted in a<a href="https://arxiv.org/pdf/1708.02312.pdf">paper by Nie and Bansal</a> which is also one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results.</p>
+<p>Approach 1, is useful for training generic sentence encoders and can be used for a variety of other tasks, like the <a href="https://arxiv.org/pdf/1705.02364.pdf">InferSent</a> paper.
+The figure above shows a generic architecture, for SNLI tasks. The sentence encoders are often a deep learning architecture, like a CNN or an RNN that outputs a fixed size representation vector v, for the hypothesis and the premise separately. Once the sentence vectors are generated, 3 matching
+methods are applied to extract relations between the two fixed size representation vectors:</p>
+<ul>
+  <li>concatenation of the two representations</li>
+  <li>element-wise product of the two vectors</li>
+  <li>absolute element-wise difference of the two vectors.</li>
+</ul>
+
+<p>The resulting vector, which captures information from both the premise and the hypothesis, is fed into a 3-class classifier consisting of multiple fullyconnected layers culminating in a softmax layer.</p>
+
+<p>The generic approach is best highlighted in a <a href="https://arxiv.org/pdf/1708.02312.pdf">paper by Nie and Bansal</a> which is also one of the state of the art architectures for semantic entailment as per the results on the RepEval 2017 results.</p>
 
 <p><img src="https://drive.google.com/uc?export=&amp;id=1KpPTdhWDE3M2ZHYXAaRKJMNk_hCzi2aT" alt="" title="Nie and Bansal" /></p>
 
@@ -293,7 +301,7 @@ layers culminating in a softmax layer.</p>
 
     <footer>
       <span>
-        &copy; <time datetime="2017-12-22 12:25:33 -0500">2017</time> Chester How. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2017-12-24 15:50:00 -0500">2017</time> Trishala Neeraj. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

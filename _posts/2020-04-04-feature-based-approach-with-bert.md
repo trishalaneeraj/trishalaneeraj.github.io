@@ -49,7 +49,7 @@ This sentence upon tokenization would look like this:
 'please', 'stop', 'van', '##dal', '##ising', 'wikipedia', 'immediately', 'or', 'you', 'will', 'be', 'blocked'
 ```
 
-Notice the tokens are either the words lowercases, or a leading-subword from a larger word or a trailing-subword from a larger word (marked with a `##` to indicate so).
+Notice, the tokens are either the words lowercases, or a leading-subword from a larger word or a trailing-subword from a larger word (marked with a `##` to indicate so).
 
 ### Add special tokens -- [CLS] in the beginning & [SEP] as a separator between sentences (or at the end of a single sentence)
 
@@ -59,7 +59,7 @@ Notice the tokens are either the words lowercases, or a leading-subword from a l
 
 ### Pad tokenized sequences to the maximum length (or truncate sequences to a fixed size)
 
-For this dataset, I've chosen the maximum length of 64. Sentences with lesser than 64 tokens will be padded to meet this length, and sentences with more would be truncated.
+For this dataset, I've chosen the maximum length of 64. Sequences with lesser than 64 tokens will be padded to meet this length, and sequences with more would be truncated.
 
 ### Convert tokens to IDs and convert to tensors
 
@@ -70,26 +70,13 @@ tensor([  101,  3531,  2644,  3158,  9305,  9355, 16948,  3202,  2030,  2017,
             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0,     0,     0,     0,     0,     0,     0])
+            0,     0,     0,     0])
 ```
 
 ### Create an attention masks (also tensors) to explicitly identify tokens that are actually PAD tokens.
 
 ```
-tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 ```

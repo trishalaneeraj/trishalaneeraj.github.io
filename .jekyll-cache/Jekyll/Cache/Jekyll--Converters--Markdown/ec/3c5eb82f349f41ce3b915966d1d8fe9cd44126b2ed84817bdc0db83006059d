@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-    
-      Feature-based Approach with BERT &middot; Trishala
-    
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-</head>
-
-
-  <body>
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Trishala</h2>
-        </a>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/">Posts</a></li>
-        </ul>
-    </div>
-  </nav>
-
-    <main>
-      <div class="post">
-  <div class="post-info">
-    <span>Written by</span>
-    
-        Trishala Neeraj
-    
-
-    
-      <br>
-      <span>on&nbsp;</span><time datetime="2020-04-04 00:00:00 -0700">April 04, 2020</time>
-    
-  </div>
-
-  <h1 class="post-title">Feature-based Approach with BERT</h1>
-  <div class="post-line"></div>
-
-  <p>BERT is a language representation model pre-trained on a very large amount of unlabeled text corpus over different pre-training tasks. It was proposed in the paper <a href="https://arxiv.org/abs/1810.04805">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a> (Devlin et al., 2018). BERT is deeply bidirectional, i.e., it pre-trains deep bidirectional representations from text by jointly conditioning on context in both directions. In other words, to represent a word in a sentence, BERT will use both its previous as well as its next context in contrast to:</p>
+I"pC<p>BERT is a language representation model pre-trained on a very large amount of unlabeled text corpus over different pre-training tasks. It was proposed in the paper <a href="https://arxiv.org/abs/1810.04805">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a> (Devlin et al., 2018). BERT is deeply bidirectional, i.e., it pre-trains deep bidirectional representations from text by jointly conditioning on context in both directions. In other words, to represent a word in a sentence, BERT will use both its previous as well as its next context in contrast to:</p>
 <ol>
   <li>context-free models like <a href="https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">word2vec</a> (Mikolov et al., 2013) or <a href="https://nlp.stanford.edu/pubs/glove.pdf">Glove</a> (Pennington et al., 2014)</li>
   <li>shallowly bidirectional contextual models like <a href="https://arxiv.org/abs/1802.05365">ELMo</a> (Peters et al., 2018)</li>
@@ -113,7 +59,7 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'please', 'stop', 'van', '##dal', '##ising', 'wikipedia', 'immediately', 'or', 'you', 'will', 'be', 'blocked'
 </code></pre></div></div>
 
-<p>Notice, the tokens are either the words lowercases, or a leading-subword from a larger word or a trailing-subword from a larger word (marked with a <code class="highlighter-rouge">##</code> to indicate so).</p>
+<p>Notice the tokens are either the words lowercases, or a leading-subword from a larger word or a trailing-subword from a larger word (marked with a <code class="highlighter-rouge">##</code> to indicate so).</p>
 
 <h3 id="add-special-tokens--cls-in-the-beginning--sep-as-a-separator-between-sentences-or-at-the-end-of-a-single-sentence">Add special tokens – [CLS] in the beginning &amp; [SEP] as a separator between sentences (or at the end of a single sentence)</h3>
 
@@ -132,12 +78,25 @@
             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
             0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-            0,     0,     0,     0])
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+            0,     0,     0,     0,     0,     0,     0,     0,     0,     0])
 </code></pre></div></div>
 
 <h3 id="create-an-attention-masks-also-tensors-to-explicitly-identify-tokens-that-are-actually-pad-tokens">Create an attention masks (also tensors) to explicitly identify tokens that are actually PAD tokens.</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 </code></pre></div></div>
@@ -277,25 +236,4 @@ for i in range(12):
 <h1 id="future-work">Future Work</h1>
 
 <p>In future work, I will also fine-tune rather than sticking with the feature-based approach. While the latter might be a good and economical option for a large number of use-cases, it would be definitely worth exploring tradeoffs to using it over fine-tuning.</p>
-
-
-</div>
-
-<div class="pagination">
-  
-  
-    <a href="/2017-12-22/semantic-entailment" class="right arrow">&#8594;</a>
-  
-
-  <a href="#" class="top">Top</a>
-</div>
-
-    </main>
-
-    <footer>
-      <span>
-        &copy; <time datetime="2020-04-04 21:34:02 -0700">2020</time> Trishala Neeraj. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
-      </span>
-    </footer>
-  </body>
-</html>
+:ET

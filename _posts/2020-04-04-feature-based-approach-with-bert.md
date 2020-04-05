@@ -173,4 +173,4 @@ From the results, it looks like more than one of the 12 layers helps achieve goo
 
 # Future Work
 
-In future work, I will also fine-tune rather than sticking with the feature-based approach. While the latter might be a good and economical option for a large number of use-cases, it would be definitely worth exploring tradeoffs to using it over fine-tuning. 
+In future work, I will fine-tune on this task and explore tradeoffs to using it over the fine-tuning approach. While the feature-based approach might be a good and economical option for a large number of use-cases, fine-tuning should boost performance further. 

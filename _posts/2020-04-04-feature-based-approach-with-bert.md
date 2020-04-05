@@ -59,7 +59,7 @@ Notice the tokens are either the words lowercases, or a leading-subword from a l
 
 ### Pad tokenized sequences to the maximum length (or truncate sequences to a fixed size)
 
-For this dataset, I've chosen the maximum length of 64. Sentences with lesser than 64 tokens will be padded to meet this length, but
+For this dataset, I've chosen the maximum length of 64. Sentences with lesser than 64 tokens will be padded to meet this length, and sentences with more would be truncated.
 
 ### Convert tokens to IDs and convert to tensors
 

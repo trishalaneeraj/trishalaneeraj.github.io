@@ -1,58 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-    
-      Semantic Entailment &middot; Trishala
-    
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-</head>
-
-
-  <body>
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Trishala</h2>
-        </a>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/">Posts</a></li>
-        </ul>
-    </div>
-  </nav>
-
-    <main>
-      <div class="post">
-  <div class="post-info">
-    <span>Written by</span>
-    
-        Trishala Neeraj
-    
-
-    
-      <br>
-      <span>on&nbsp;</span><time datetime="2017-12-22 00:00:00 -0800">December 22, 2017</time>
-    
-  </div>
-
-  <h1 class="post-title">Semantic Entailment</h1>
-  <div class="post-line"></div>
-
-  <p>A key part of our understanding of natural language is the ability to understand sentence semantics. <!-- Essentially, given a piece of text the goal is to understand the additional information that the reader is entitled to conclude about what the author believes in addition to what she actually says.  --></p>
+I"¹M<p>A key part of our understanding of natural language is the ability to understand sentence semantics. <!-- Essentially, given a piece of text the goal is to understand the additional information that the reader is entitled to conclude about what the author believes in addition to what she actually says.  --></p>
 
 <p>Semantic Enatilment or, more poularly, the task of Natural Language Inference (NLI) is a core Natural Language Understanding task (NLU). While it poses as a classification task, it is uniquely well-positioned to serve as a benchmark task for research on NLU. It attempts to judge whether one sentence can be inferred from another.</p>
 
@@ -286,25 +232,4 @@ methods are applied to extract relations between the two fixed size representati
 <h1 id="future-directions">Future Directions</h1>
 
 <p>Learning generic sentence embeddings have barely been explored and understanding the NLI task can improve sentence encoding. The MultiNLI and the SNLI datasets are large scale labeled datasets for Natural Language Processing. Unlike images, NLP does not have large scale labeled datasets that can be used for equivalent transfer learning tasks. The infersent paper, showed how transfer learning is a viable approach for learning different tasks and how such models perform competitively for tasks like Sentiment Analysis  and text classification. Another paper, <a href="https://arxiv.org/abs/1709.03856">StarSpace</a>, shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done. More work need to done, to better understand sentence encoding architectures and I believe semantic entailment datasets will play a key role in that line of research.</p>
-
-
-</div>
-
-<div class="pagination">
-  
-    <a href="/2020-04-04/feature-based-approach-with-bert" class="left arrow">&#8592;</a>
-  
-  
-
-  <a href="#" class="top">Top</a>
-</div>
-
-    </main>
-
-    <footer>
-      <span>
-        &copy; <time datetime="2020-04-04 17:42:01 -0700">2020</time> Trishala Neeraj. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
-      </span>
-    </footer>
-  </body>
-</html>
+:ET

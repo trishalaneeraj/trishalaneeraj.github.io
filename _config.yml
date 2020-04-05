@@ -29,3 +29,10 @@ github:
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-remote-theme
+
+remote_theme: chesterhow/tale
+
+plugins:
+  - jekyll-paginate
+  - jekyll-remote-theme

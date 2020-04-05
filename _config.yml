@@ -31,7 +31,7 @@ plugins:
   - jekyll-paginate
   - jekyll-remote-theme
 
-remote_theme: chesterhow/tale
+# remote_theme: chesterhow/tale
 
 plugins:
   - jekyll-paginate

@@ -32,7 +32,7 @@ BERT’s model architecture is a multi-layer bidirectional Transformer encoder. 
 
 Input data needs to be prepared in a special way. BERT uses WordPiece embeddings (Wu et al.,2016) with a 30,000 token vocabulary. There are 2 special tokens that are introduced in the text -- 
 
-* a token [SEP] to separate two senteces, and 
+* a token [SEP] to separate two sentences, and 
 * a classification token [CLS] which is the first token of every tokenized sequence.
 
 The authors state that the final hidden state corresponding to the [CLS] token is used as the aggregate sequence representation for classification tasks. I am interested in looking into how meaningful these representations are across each of the 12 layers. Here's how to obtain these embeddings from the dataset I've selected.

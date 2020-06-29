@@ -17,7 +17,11 @@ I am fascinated by this result and sought to replicate an experimental setup sim
 
 # Data
 
-In this blog post, I will work through a text classification task. The dataset I've chosen is the [Jigsaw Multilingual Toxic Comment Classification](https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification) dataset. The training data is English-only and comprises of the text of comments made in online conversations as well as a boolean field specifying if a given comment has been classified as toxic or non-toxic. The task is to predict if a comment is toxic. Here's a sample of what the data looks like -
+In this blog post, I will work through a text classification task with the high-level steps described in this figure below. 
+
+![Image with caption](https://drive.google.com/uc?export=view&id=1YR9hNz4de476hm-Jnv53z87FyootbgOX "Overview")
+
+The dataset I've chosen is the [Jigsaw Multilingual Toxic Comment Classification](https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification) dataset. The training data is English-only and comprises of the text of comments made in online conversations as well as a boolean field specifying if a given comment has been classified as toxic or non-toxic. The task is to predict if a comment is toxic. Here's a sample of what the data looks like -
 
 | sentence        | label           | 
 | ------------- |:-------------:| 
@@ -109,6 +113,9 @@ input_ids = torch.cat(input_ids, dim=0)
 attention_masks = torch.cat(attention_masks, dim=0)
 ```
 
+A recap of this data preparation is captured in this figure below.
+
+![Image with caption](https://drive.google.com/uc?export=view&id=1r_gubMVsJZeGhNLyvA94qPhfiYGdOn7W "Data Preparation")
 
 # Contextual Embeddings
 
@@ -129,13 +136,17 @@ The tuple `outputs` comprises of the following tensors(based on [documentation](
 * pooler_output
 * hidden_states
 
+![Image with caption](https://drive.google.com/uc?export=view&id=18ZNeOWEMnX0F2exzfcPr_-djxvVsOpVi "Input/Output")
+
 In this work, I'm most interested in the `hidden_states` which is a tuple of 3 tensors. The last element of this tuple contains the contextual embeddings that each Transformer layer outputs. They can be accessed like this -
 
 ```
 embeddings = outputs[2][1:]
 ```
 
-Here, `embeddings` is another tuple of size 12, containing 12 sets of contextual embeddings -- one from each layer. Note that these embeddings represent all tokens in the input sequence padded / truncated to the maximum fixed length. Each tensor in `embeddings` is of the shape -- (num_samples x max_length x hidden_size), in this case (1000 x 64 x 768).
+Here, `embeddings` is another tuple of size 12, containing 12 sets of contextual embeddings -- one from each layer. Note that these embeddings represent all tokens in the input sequence padded / truncated to the maximum fixed length. Each tensor in `embeddings` is of the shape -- (num_samples x max_length x hidden_size), in this case (1000 x 64 x 768). The figure below captures these details.
+
+![Image with caption](https://drive.google.com/uc?export=view&id=1gCWl6ng2syroBCuyxlK3j3SnHbnan67a "Hidden States")
 
 In this work, I'm focussed on the downstream task of text classification, and therefore would only work with representations encoding [CLS] tokens, because as mentioned in the previous section, they are the aggregate sequence representation for classification tasks. Therefore, I will slice the embeddings -
 
@@ -147,7 +158,11 @@ cls_embeddings = []
 for i in range(12):
     cls_embeddings.append(get_CLS_embedding(embeddings[i]))
 ```
-Each of these 12 NumPy arrays in the list `cls_embeddings` would be of shape (num_samples x hidden_size), in this case (1000 x 768), and each of these can be used as train a text classifier. As a reminder, I will not be fine-tuning, but simply using these features extracted from BERT as input features to my model.
+Each of these 12 NumPy arrays in the list `cls_embeddings` would be of shape (num_samples x hidden_size), in this case (1000 x 768), and each of these can be used as train a text classifier. The figure below should make this clearer.
+
+![Image with caption](https://drive.google.com/uc?export=view&id=1hDLUCYsyX3z8eSuIpyJJtNLu17C1uXsG "CLS slice")
+
+As a reminder, I will not be fine-tuning, but simply using these features extracted from BERT as input features to my model.
 
 # Performance on Text Classification
 

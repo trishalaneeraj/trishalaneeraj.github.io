@@ -5,12 +5,6 @@ author: "Trishala Neeraj"
 permalink: /about/
 ---
 
-<!-- <img src="https://drive.google.com/uc?export=&id=1wqShoxMeuBopGlVyhHDfjgo3EsiVQyrq" width="504" height="480" /> -->
-<!-- <img src="https://drive.google.com/uc?export=&id=1ImBgVdtdU3MMQHUwIDpyw2RLmZuOGi_5" width="400" height="400" /> -->
-<!-- <img src="https://drive.google.com/uc?export=&id=1to24tk7ZS12Y3cq5U2nLxIubWcsx_r7I" width="400" height="440" />  -->
-<!-- works^^ -->
-<!-- https://drive.google.com/file/d/1to24tk7ZS12Y3cq5U2nLxIubWcsx_r7I/view?usp=sharing -->
-
 <img src="https://drive.google.com/uc?export=&id=1tAWkghLNpClRCUtIfwMgXBdVscEMrwsK" width="400" height="470" /> 
 
 Hi, I am Trishala Neeraj. Currently based in San Francisco, I am working on Machine Learning problems at CyberCube. I work with a variety of data (both structured and unstructured) to determine organizations’ cyber risk profiles. 

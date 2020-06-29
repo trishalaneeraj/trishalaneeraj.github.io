@@ -27,7 +27,7 @@ https://insights.cybcube.com/post/102fqdw/cyber-security-professionals-unveil-he
 ### 2018
 * Graduated from Cornell University. Class of 2018! [[Tweet](https://twitter.com/CornellInfoSci/status/1000490385699991552)]
 * Built clear.ai - an affordable assistive technology for the visually impaired, powered by Computer Vision. Collaborated with a multi-disciplinary team for this project. clear.ai was selected as one of Cornell Tech’s “Tech with a Purpose” products. [[Press](https://tech.cornell.edu/news/video-tech-with-a-purpose/)]
-* Interviewed Eric Schmidt on his ideas of groundbreaking technology, content moderation on search/video platforms, and social good. [[Tweet](https://twitter.com/trishalaneeraj/status/969640286132559877)]
+* Interviewed Eric Schmidt, Technical Advisor at Alphabet Inc. (previously CEO and executive chairman of Google), on his ideas of groundbreaking technology, content moderation on search/video platforms, and social good. [[Tweet](https://twitter.com/trishalaneeraj/status/969640286132559877)]
 
 ### 2017
 * Selected to represent the student body at Cornell Tech Campus Dedication ceremony. Received a shout-out from the Governor of New York, Andrew Cuomo. [[Video](https://www.youtube.com/watch?v=sDlt4AIKJjw&feature=youtu.be)][[Press](https://www.governor.ny.gov/news/video-photos-rush-transcript-governor-cuomo-delivers-remarks-ribbon-cutting-cornell-tech-campus)]

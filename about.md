@@ -30,8 +30,8 @@ https://insights.cybcube.com/post/102fqdw/cyber-security-professionals-unveil-he
 
 ### 2017
 * Selected to represent the student body at Cornell Tech Campus Dedication ceremony. Received a shout-out from the Governor of New York, Andrew Cuomo. [[Video](https://www.youtube.com/watch?v=sDlt4AIKJjw&feature=youtu.be)][[Press](https://www.governor.ny.gov/news/video-photos-rush-transcript-governor-cuomo-delivers-remarks-ribbon-cutting-cornell-tech-campus)]
-* Paper accepted at Association for the Advancement of Artificial Intelligence (AAAI 2017). [[Link](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/view/15630/14864)]
-* Interned at BuzzFeed Data Science Team. [[Blog](https://tech.buzzfeed.com/how-we-tagged-14-000-buzzfeed-quizzes-using-k-means-clustering-95fc46bc6daf)]
+* Paper accepted at Association for the Advancement of Artificial Intelligence (AAAI 2017). [[Paper](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/view/15630/14864)]
+* Interned at BuzzFeed Data Science Team. [[Blog Post](https://tech.buzzfeed.com/how-we-tagged-14-000-buzzfeed-quizzes-using-k-means-clustering-95fc46bc6daf)]
 
 ### 2016
 * Selected to be part of a multi-disciplinary team of graduate students to work with the Customer Support Applications team at Google NYC, to specifically work on the problem of low response rate for customer satisfaction surveys. [[Press](https://tech.cornell.edu/news/product-challenge-google-cio/)]

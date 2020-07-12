@@ -2,7 +2,7 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Trishala
+title:          Trishala's Blog
 paginate:       5
 baseurl:        ""
 url:            "https://trishalaneeraj.github.io"

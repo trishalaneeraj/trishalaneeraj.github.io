@@ -11,6 +11,8 @@ Hi, I am Trishala Neeraj. Currently based in San Francisco, I am working on Mach
 
 I obtained my Master's degree in Information and Computer Science at Cornell University, based in New York City at Cornell Tech. My research, advised by [Mor Naaman](https://people.jacobs.cornell.edu/mor/), was focused on developing tools to assist investigative journalism, by using methods in Information Retrieval. During graduate school, I specialized in Machine Learning and Natural Language Processing and was part of the teaching staff for [CS 5785 Applied Machine Learning](https://cornelltech.github.io/cs5785-fall-2017/index.html) for Fall 2017. I also spent some time learning and thinking about the [human and social aspects of technology](https://medium.com/p/66120ec11854#f79f), and contributed directly to ongoing research in the topics of Trust and Computational Social Science.
 
+I received my Bachelor of Engineering degree from BITS Pilani, India. During that time, I worked on various projects in the Networks and Communications Laboratory in the Department of Electrical and Electronics Engineering, and also the Department of Humanities and Social Science in collaboration with Human Resource Development, Government of India.
+
 Here’s a selection of projects I enjoyed working on and other highlights over the past few years - 
 
 ### 2020

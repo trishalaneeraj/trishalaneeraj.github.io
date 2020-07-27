@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Weak Supervision to make online discussions better"
+title: "Weak Supervision for Online Discussions"
 author: "Trishala Neeraj"
 ---
 

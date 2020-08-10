@@ -19,7 +19,7 @@ I obtained a Master of Science degree in Information and Computer Science from C
 * Mentoring a Data Science Intern for Summer 2020 at CyberCube.
 
 ### 2019
-* White Paper on analysis of CyberCube's Cyber Threat Outlook Survey that collected data from domain experts' perspectives on the frequency and severity of the cyber threats facing businesses. [[Link](
+* White Paper on analysis of CyberCube's Cyber Threat Outlook Survey that collected data from domain experts' perspectives on the frequency and severity of the cyber threats facing businesses. [[White Paper](
 https://insights.cybcube.com/post/102fqdw/cyber-security-professionals-unveil-heightened-concerns-around-cascading-impacts)] 
 * Invited to attend Full-Stack Deep Learning Bootcamp at Berkeley Artificial Intelligence Research at the University of California, Berkeley. Awarded Turnitin Scholarship for the program.
 

@@ -14,7 +14,7 @@ I particularly enjoy working with language data and I've set up this blog to doc
 I obtained a Master of Science degree in Information and Computer Science from Cornell University, based in New York City at Cornell Tech. My research, advised by [Mor Naaman](https://people.jacobs.cornell.edu/mor/), was focused on developing tools to assist investigative journalism using Information Retrieval. During grad school, I specialized in Machine Learning and Natural Language Processing. I also spent some time learning the human and social aspects of technology, and [collaborated with community-based organizations](https://medium.com/p/66120ec11854#f79f) in implementing sustainable technological solutions to address some of the challenges they faced. I obtained a Bachelor of Engineering degree from BITS Pilani, India. During that time, I worked on various projects at the Networks and Communications Laboratory (Department of Electrical and Electronics Engineering). Below is a selection of projects I enjoyed working on / other highlights over the past few years - 
 
 ### 2020
-* Paper accepted at IEEE International Conference on Data Science in Cyberspace (IEEE DSC 2020).
+* Paper accepted at IEEE International Conference on Data Science in Cyberspace (IEEE DSC 2020).[[Paper](https://ieeexplore.ieee.org/abstract/document/9172854)]
 * Speaker at Data Insights Workshop at [Foresight 2020](https://insights.cybcube.com/foresight-2020-virtual-reality) -- discussed change point analysis using data on historical cyber-breaches and endpoint security.
 * Mentoring a Data Science Intern for Summer 2020 at CyberCube.
 

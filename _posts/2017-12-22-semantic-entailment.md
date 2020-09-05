@@ -145,3 +145,18 @@ Their architecture relies on word vectors and Bi-LSTMs connected in a ResNet-lik
 # Future Directions
 
 Learning generic sentence embeddings have barely been explored and understanding the NLI task can improve sentence encoding. The MultiNLI and the SNLI datasets are large scale labeled datasets for Natural Language Processing. Unlike images, NLP does not have large scale labeled datasets that can be used for equivalent transfer learning tasks. The infersent paper, showed how transfer learning is a viable approach for learning different tasks and how such models perform competitively for tasks like Sentiment Analysis  and text classification. Another paper, [StarSpace](https://arxiv.org/abs/1709.03856), shows embedding sentences, words for various tasks like text classification perform very competitively yet extensive comparison of sentence encoding architectures with NLI has not yet been done. More work need to done, to better understand sentence encoding architectures and I believe semantic entailment datasets will play a key role in that line of research.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This post can be cited as:
+
+```
+@article{neeraj2020semanticentailment,
+    title = "Semantic Entailment",
+    author = "Neeraj, Trishala",
+    journal = "trishalaneeraj.github.io",
+    year = "2020",
+    url = "https://trishalaneeraj.github.io/2017-12-22/semantic-entailment"
+}
+```

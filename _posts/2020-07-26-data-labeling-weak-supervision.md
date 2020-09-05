@@ -307,3 +307,17 @@ A lot more can be done with labeling functions. Here are a couple of other ideas
 
 I would personally learn more about this domain and write more number of rich labeling functions as it seems like this could be a good sustainable approach to monitoring toxicity on the internet.
 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This post can be cited as:
+
+```
+@article{neeraj2020wsfortoxicity,
+    title = "Data Labeling using Weak Supervision: In Action",
+    author = "Neeraj, Trishala",
+    journal = "trishalaneeraj.github.io",
+    year = "2020",
+    url = "https://trishalaneeraj.github.io/2020-07-26/data-labeling-weak-supervision"
+}
+```

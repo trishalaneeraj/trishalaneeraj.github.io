@@ -189,3 +189,18 @@ From the results, it looks like more than one of the 12 layers helps achieve goo
 # Future Work
 
 In future work, I will fine-tune on this task and explore tradeoffs to using it over the fine-tuning approach. While the feature-based approach might be a good and economical option for a large number of use-cases, fine-tuning should boost performance further. 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This post can be cited as:
+
+```
+@article{neeraj2020bertlayers,
+    title = "Feature-based Approach with BERT",
+    author = "Neeraj, Trishala",
+    journal = "trishalaneeraj.github.io",
+    year = "2020",
+    url = "https://trishalaneeraj.github.io/2020-04-04/feature-based-approach-with-bert"
+}
+```

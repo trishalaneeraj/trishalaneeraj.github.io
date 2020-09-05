@@ -58,4 +58,19 @@ Once we model, denoise, and unify these noisy, conflicting, and potentially corr
 
 The authors use this generative model to optimize the loss function of the discriminative model we want to train. One of the key theoretical results of this paper is that we can achieve the same asymptotic scaling as supervised learning methods, but that scaling depends on the amount of unlabeled data and uses only a fixed number of labeling functions.
 
-In future work, I'll share more details on the labeling functions I wrote for this task, along with details on how much data they're able to label and how much they agree / conflict with each other.
+In future work, I'll share more details on the labeling functions I wrote for this task, along with details on how much data they're able to label and how much they agree / conflict with each other
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This post can be cited as:
+
+```
+@article{neeraj2020ws,
+	title = "Weak Supervision for Online Discussions",
+	author = "Neeraj, Trishala",
+	journal = "trishalaneeraj.github.io",
+	year = "2020",
+	url = "https://trishalaneeraj.github.io/2020-07-05/weak-supervision"
+}
+```

@@ -152,7 +152,7 @@ Learning generic sentence embeddings have barely been explored and understanding
 This post can be cited as:
 
 ```
-@article{neeraj2020semanticentailment,
+@article{neeraj2017semanticentailment,
     title = "Semantic Entailment",
     author = "Neeraj, Trishala",
     journal = "trishalaneeraj.github.io",

@@ -170,3 +170,17 @@ We surely were entertained creating and analyzing these clusters and hope you al
 * * *
 
 Check out BuzzFeed's [Tech Blog](https://tech.buzzfeed.com/) and [Twitter](http://twitter.com/buzzfeedexp) to learn more about other projects at BuzzFeed.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This post can be cited as:
+
+```
+@article{neeraj2017clustering,
+    title = "How We Tagged 14,000 BuzzFeed Quizzes Using K-Means Clustering",
+    author = "Neeraj, Trishala",
+    journal = "tech.buzzfeed.com",
+    year = "2020",
+    url = "https://tech.buzzfeed.com/how-we-tagged-14-000-buzzfeed-quizzes-using-k-means-clustering-95fc46bc6daf"
+}
+```

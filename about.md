@@ -6,8 +6,7 @@ permalink: /about/
 ---
 
 <!-- <img src="https://drive.google.com/uc?export=&id=1to24tk7ZS12Y3cq5U2nLxIubWcsx_r7I" alt="test" width="320" height=auto /> -->
-<img src="https://drive.google.com/uc?export=&id=10c5yIPVICUyDNxlBwLGX6R5Be4jVj-uU" alt="test" width="320" height=auto> 
-
+<img src="https://drive.google.com/uc?export=&id=1HdgKbw1qqFQ3opksG70zQWWJUlS5FVqc" alt="test" width="320" height=auto> 
 
 ## About
 Based in San Francisco, I currently work as part of a cross-functional team of product leaders, analysts, actuaries, and other scientists and engineers to deliver cyber-risk analytics to the global cyber-insurance market. I am experienced in working with terabyte-scale data to develop models using deep learning and matrix factorization techniques, powering numerous product features.

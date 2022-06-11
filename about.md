@@ -5,11 +5,10 @@ author: "Trishala Neeraj"
 permalink: /about/
 ---
 
-<!-- <img src="https://drive.google.com/uc?export=&id=1to24tk7ZS12Y3cq5U2nLxIubWcsx_r7I" alt="test" width="320" height=auto /> -->
 <img src="https://drive.google.com/uc?export=&id=1HdgKbw1qqFQ3opksG70zQWWJUlS5FVqc" alt="test" width="320" height=auto> 
 
 ## About
-Based in San Francisco, I currently work as part of a cross-functional team of product leaders, analysts, actuaries, and other scientists and engineers to deliver cyber-risk analytics to the global cyber-insurance market. I am experienced in working with terabyte-scale data to develop models using deep learning and matrix factorization techniques, powering numerous product features.
+I am a San Francisco based Machine Learning Researcher and Engineer, currently working on delivering cyber-risk analytics to the global cyber-insurance market. I work with terabyte-scale data to develop models using Deep Learning and Matrix Factorization techniques.
 
 I particularly enjoy working with language data and models, and I have set up this blog to document personal research projects. If you have any questions or comments about any of my [blog posts](http://trishalaneeraj.github.io/) here or my work in general, please feel free to email me at tn338 [at] cornell [dot] edu. You can also find me on [LinkedIn](https://www.linkedin.com/in/trishalaneeraj/) or [Twitter](https://twitter.com/trishalaneeraj).
 
@@ -19,6 +18,7 @@ I focused on Machine Learning and Natural Language Processing during my graduate
 I obtained a Bachelor of Engineering degree from BITS Pilani, India. I also spent some time at the Predictive Technology Lab at University of Virginia as a visiting research scholar. I worked on projects designed and developed for research in public health.
 
 ## News / Highlights
+* June 2022: Our paper [Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models](https://arxiv.org/abs/2206.04615) is live on arXiv.
 * Jan 2022: Our paper [Multitask Prompted Training Enables Zero-Shot Task Generalization](https://arxiv.org/abs/2110.08207) is accepted at **ICLR 2022** as spotlight.
 * Sept 2021: Our project demonstrating how Weak Supervision can be used to detect dataset errors and model limitations won the Impact Award at [AllenNLP Hacks 2021](https://allennlp-hackathon.apps.allenai.org/) -- a hackathon organized by Allen Institute of AI. Slides can be made available upon request.
 * June 2020: Our paper [Longitudinal Analysis of Cyber-Related Articles](https://ieeexplore.ieee.org/abstract/document/9172854) is accepted at **IEEE International Conference on Data Science in Cyberspace 2020**.

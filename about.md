@@ -18,6 +18,7 @@ I focused on Machine Learning and Natural Language Processing during my graduate
 I obtained a Bachelor of Engineering degree from BITS Pilani, India. I also spent some time at the Predictive Technology Lab at University of Virginia as a visiting research scholar. I worked on projects designed and developed for research in public health.
 
 ## News / Highlights
+* June 2022: Our paper [BigBIO: A Framework for Data-Centric Biomedical Natural Language Processing](https://arxiv.org/abs/2206.15076) is live on arXiv.
 * June 2022: Our paper [Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models](https://arxiv.org/abs/2206.04615) is live on arXiv.
 * Jan 2022: Our paper [Multitask Prompted Training Enables Zero-Shot Task Generalization](https://arxiv.org/abs/2110.08207) is accepted at **ICLR 2022** as spotlight.
 * Sept 2021: Our project demonstrating how Weak Supervision can be used to detect dataset errors and model limitations won the Impact Award at [AllenNLP Hacks 2021](https://allennlp-hackathon.apps.allenai.org/) -- a hackathon organized by Allen Institute of AI. Slides can be made available upon request.
